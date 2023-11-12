@@ -1,11 +1,24 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "build"
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths" : {
+      "src/*": ["./src/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
     "test/**/*.ts"
-  ]
+  ],
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  }
 }

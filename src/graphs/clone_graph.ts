@@ -1,4 +1,4 @@
-import {warn} from 'console';
+import {log} from 'console';
 
 /**
  * Definition for Node.
@@ -40,5 +40,5 @@ export function main() {
   n3.neighbors = [n2, n4];
   n4.neighbors = [n1, n3];
   const node = cloneGraph(n1);
-  console.log(node);
+  log(node);
 }

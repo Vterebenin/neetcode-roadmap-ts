@@ -1,16 +1,25 @@
 {
   "devDependencies": {
+    "@types/node": "20.4.6",
     "gts": "^5.0.1",
-    "typescript": "~5.1.6",
-    "@types/node": "20.4.6"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "~5.1.6"
   },
   "scripts": {
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "go": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.3",
+    "ts-node": "^10.9.1"
+  },
+  "_moduleAliases": {
+    "@modules": "dist/rest/modules",
+    "@services": "dist/services"
   }
 }
