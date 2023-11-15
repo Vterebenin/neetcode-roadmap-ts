@@ -1,3 +1,5 @@
-import {main} from 'src/graphs/clone_graph';
+import {graphs} from 'src/graphs';
+import {printPassedTotalCount} from './utils';
 
-main();
+graphs();
+printPassedTotalCount();

@@ -1,4 +1,5 @@
-import {log} from 'console';
+import {assert} from 'console';
+import {printPass} from 'src/utils';
 
 /**
  * Definition for Node.
@@ -30,7 +31,9 @@ function cloneGraph(node: Node | null): Node | null {
   return newNode;
 }
 
-export function main() {
+const NAME = 'clone-graph';
+
+export function cloneGraphMain() {
   const n1 = new Node(1, []);
   const n2 = new Node(2, []);
   const n3 = new Node(3, []);
@@ -40,5 +43,6 @@ export function main() {
   n3.neighbors = [n2, n4];
   n4.neighbors = [n1, n3];
   const node = cloneGraph(n1);
-  log(node);
+  assert(node !== n1);
+  printPass(NAME);
 }
