@@ -1,3 +1,5 @@
+import {CONSOLE_COLORS, TOTAL_COLORS} from './const';
+
 export const count_passed = {
   passed: 0,
 };
@@ -13,11 +15,24 @@ export const assert = (condition: boolean) => {
   }
 };
 
+const printWithColors = (msg: string, ...colors: string[]) => {
+  console.log(`${colors.join('')}${msg}`);
+};
 export const printPass = (name: string) => {
   count_passed.passed += 1;
   const link = `https://leetcode.com/problems/${name}/`;
-  console.log(`passsed: ${name}, ${link}`);
+  console.log(
+    `${CONSOLE_COLORS.FgGreen}passsed: ${CONSOLE_COLORS.FgCyan}${name}, ${link}`
+  );
 };
+
 export const printPassedTotalCount = () => {
-  console.log(`total tests passsed: ${count_passed.passed}`);
+  printWithColors(
+    `total tests passsed: ${count_passed.passed}`,
+    ...TOTAL_COLORS
+  );
 };
+
+export const clearTerminal = () => {
+  console.log('\x1b[2J');
+}

@@ -1,5 +1,6 @@
 import {graphs} from 'src/graphs';
-import {printPassedTotalCount} from './utils';
+import {clearTerminal, printPassedTotalCount} from './utils';
 
+clearTerminal();
 graphs();
 printPassedTotalCount();
