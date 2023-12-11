@@ -1,3 +1,8 @@
+/** HINT:
+ * just run over the graph by dfs and create nodes
+ * its a common algorithm, learn the solution is the only way to memorize
+ */
+
 import {assert} from 'console';
 import {printPass} from 'src/utils';
 
