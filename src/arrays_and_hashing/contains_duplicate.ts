@@ -1,3 +1,8 @@
+/** HINT:
+ * create a HashMap that will count up duplicates
+ * if it contains already setted item, then true
+   * false otherwise
+ */
 import {assert} from 'console';
 import {printPass} from 'src/utils';
 
