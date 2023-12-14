@@ -3,9 +3,18 @@ import {CONSOLE_COLORS, TOTAL_COLORS} from './const';
 export const count_passed = {
   passed: 0,
 };
+export const throwExpectedEqualError = <T>(a: T, b: T) => {
+  throw new Error(`expected ${a} to be equal to ${b}`);
+};
 export const assertEq = <T>(a: T, b: T) => {
   if (a !== b) {
-    throw new Error(`expected ${a} to be equal to ${b}`);
+    throwExpectedEqualError(a, b);
+  }
+};
+
+export const assertEqExact = <T>(a: T, b: T) => {
+  if (JSON.stringify(a) !== JSON.stringify(b)) {
+    throwExpectedEqualError(a, b);
   }
 };
 
@@ -35,4 +44,4 @@ export const printPassedTotalCount = () => {
 
 export const clearTerminal = () => {
   console.log('\x1b[2J');
-}
+};
