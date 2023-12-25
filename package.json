@@ -10,7 +10,8 @@
     "clean": "gts clean",
     "fix": "gts fix",
     "go": "ts-node src/index.ts",
-    "hint": "ts-node src/getHints.ts"
+    "hint": "ts-node src/getHints.ts",
+    "create": "ts-node src/createFile.ts"
   },
   "dependencies": {
     "module-alias": "^2.2.3",

@@ -5,6 +5,7 @@ import {groupAnagramsMain} from 'src/arrays_and_hashing/group_anagrams';
 import {topKFrequentElementsMain} from 'src/arrays_and_hashing/top_k_frequent_elements';
 import {productOfArrayExceptSelfMain} from 'src/arrays_and_hashing/product_of_array_except_self';
 import {validSudokuMain} from './valid_sudoku';
+import { longestConsecutiveSequenceMain } from './longest_consecutive_sequence';
 
 export const arraysAndHashing = () => {
   containsDuplicateMain();
@@ -14,4 +15,5 @@ export const arraysAndHashing = () => {
   topKFrequentElementsMain();
   productOfArrayExceptSelfMain();
   validSudokuMain();
+  longestConsecutiveSequenceMain();
 };
