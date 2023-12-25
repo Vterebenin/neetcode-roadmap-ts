@@ -1,5 +1,6 @@
 /** HINT:
- * write a hint here
+ * just check left and if left exist go to right end with streak counting;
+ * then just get max of 2 current streak or last max streak
  */
 import {assertEq, printPass} from 'src/utils';
 
